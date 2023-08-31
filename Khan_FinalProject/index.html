@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title>Differential Calculator</title>
+    <link href="styles.css" rel="stylesheet" type="text/css" />
+    <script src="script.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@2.8.0"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/mathjs/6.0.2/math.js"></script>
+</head>
+<body>
+    <header>Definite Integral Calculator</header>
+    <main>
+        <div class="container">
+            <section class="container">
+                <label><span class="label-text">Enter integrand f(x): </span><input class="input-cb" type="text"></label>
+                <fieldset>
+                    <legend>Enter range:</legend>
+                    <label><span class="label-text">From: </span><input class="input-range-from" type="number"></label>
+                    <label><span class="label-text">To: </span><input class="input-range-to" type="number"></label>
+                </fieldset>
+                <label><span class="label-text">Enter step: </span><input class="input-step" type="number" value="0.01" step="0.1" min="0"></label>
+                <p class="error-message is-hidden"></p>
+                <button class="btn">
+                    Calculate
+                </button><br>
+                <div class="results is-hidden">
+                    <p class="result">Results:</p>
+                    <p class="result-rect"></p>
+                    <p class="result-trap"></p>
+                </div>
+
+            </section>
+            <section class="chart-container">
+                <p class="chart-info is-hidden">The chart is only available for real number results</p>
+                <canvas id="myChart"></canvas>
+            </section>
+        </div>
+    </main>
+    <div class="browserInfo">
+        <p>Click here for information about your computer.</p>
+        <button class="btn1" onclick="info()">Click here!</button>
+
+        <p1></p1>
+        <p1></p1>
+        <p1></p1>
+        <p1></p1>
+        <p1></p1>
+        <p1></p1>
+    </div>
+</body>
+</html>
